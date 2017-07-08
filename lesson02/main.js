@@ -21,17 +21,14 @@ document
  * 创建一个Box
  */
 function createBox(size) {
-    //创建物体
     var geometry = new THREE.BoxGeometry(size, size, size);
-    //创建材质
     var material = new THREE.MeshNormalMaterial();
-    //组合实物
     var box = new THREE.Mesh(geometry, material);
     return box;
 }
 
 function updateFrame(group) {
-    group && group
+    group && group.children && group
         .children
         .forEach(function (box) {
             box.rotation.x += 0.01;
