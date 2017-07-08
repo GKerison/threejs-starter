@@ -25,8 +25,8 @@ camera.position.z = 5;
 //开始循环渲染
 var render = function () {
     requestAnimationFrame(render);
-    cube.rotation.x += 0.1;
-    cube.rotation.y += 0.1;
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 };
 render();
